@@ -19,10 +19,8 @@
 
 
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
-
-var audio = document.createElement('audio');
-audio.src = 'https://www.dropbox.com/s/2livb5bgifc48do/music.mp3?dl=0';
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">var audio = document.createElement('audio');
+audio.src = 'https://www.dropbox.com/s/2livb5bgifc48do/music.mp3?dl=1';
 audio.loop = true;
 audio.play();
 
@@ -43,7 +41,10 @@ Thank you.
 [[Start.]]
 </tw-passagedata><tw-passagedata pid="2" name="Start." tags="" position="9,119" size="100,100">(if: $PostStart is 1)[You walk back to the center of the room. The [[black box]] still sits in the middle of the room. The [[small indentations]] still dot the walls surrounding you. Your [[Link Cable]] still feels secure in the base of your skull.](else:)[You awaken in a small room. The walls around you are matte black, curving up, down, left, and right, creating a room that feels almost spherical, but no quite. The ceiling is occupied by a lone blue light, its dull but comforting glow illuminating collections of [[small indentations]] scattered across the walls. You rub your head, feeling your [[Link Cable]] still firmly implanted in the base of your skull. Looking up, you notice a small [[black box]] in the middle of the room, directly under the blue light.]
 
-&lt;audio src = &quot;https://github.com/solidsmyth/game601-fall2020/blob/main/music/music.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="3" name="small indentations" tags="" position="9,241" size="100,100">(set: $PostStart to 1)\
+&lt;var audio = document.createElement(&#39;audio&#39;);
+audio.src = &#39;https://www.dropbox.com/s/2livb5bgifc48do/music.mp3?dl=1&#39;;
+audio.loop = true;
+audio.play();&gt;</tw-passagedata><tw-passagedata pid="3" name="small indentations" tags="" position="9,241" size="100,100">(set: $PostStart to 1)\
 \
 You walk over to the wall, rubbing your hands across matter black surface. The smooth surface of the wall is broken up by the occassional small indentations in the wall you noticed earlier.
 
