@@ -19,25 +19,10 @@
 
 
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">if(typeof YouTubeTunes == "undefined"){
-$('body').append('<div id="youtubetunes"></div>');
-var YouTubeTunes = {
-play: function(id){
-console.log('YouTubeTunes:' + id);
-if(this.current != id){
-this.current = id;
-var container = $('#youtubetunes');
-container.empty();
-container.append('<iframe src="https://youtube.googleapis.com/v/' + id +
-'?autoplay=1&amp;loop=1&amp;playlist='+ id +
-'" style="visibility:hidden;width:500px;height:500px;position:absolute;top:-1000px;left:-1000px;"></iframe>');
-} else {
-console.log('already playing');}},
-stop: function(){
-$('#youtubetunes').empty();
-this.current = "";
-console.log('stopped youtubetunes');}};
-window.YouTubeTunes = YouTubeTunes;}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">var audio = document.createElement('audio');
+audio.src = 'https://github.com/solidsmyth/game601-fall2020/blob/main/music/music1.mp3';
+audio.loop = true;
+audio.play();
 
 
 
@@ -53,13 +38,12 @@ window.YouTubeTunes = YouTubeTunes;}
 (set: $CN to false)\
 (set: $BR to false)\
 (set: $RUS to false)\
-&lt;div style=&quot;display:none;&quot;&gt;&lt;img src=&quot;;P&quot; onerror=&quot;YouTubeTunes.play(&#39;ABs2UpbThvA&#39;);&quot;&gt;&lt;/div&gt;\
 Content Warning: This game deals with subjects that can cause discomfort to the player. These subjects include violence, pyschological manipulation, and direct questions regarding serious existential events. These subjects are attached to a core mechanic of the game, therefore they cannot be skipped. If you find yourself becoming uncomfortable while playing the game, please allow yourself to step away for a moment or stop playing altogether. 
 
 Thank you.
 
-[[Start.]]</tw-passagedata><tw-passagedata pid="2" name="Start." tags="" position="9,109" size="100,100">(if: $PostStart is 1)[You walk back to the center of the room. The [[black box]] still sits in the middle of the room. The [[small indentations]] still dot the walls surrounding you. Your [[Link Cable]] still feels secure in the base of your skull.](else:)[You awaken in a small room. The walls around you are matte black, curving up, down, left, and right, creating a room that feels almost spherical, but no quite. The ceiling is occupied by a lone blue light, its dull but comforting glow illuminating collections of [[small indentations]] scattered across the walls. You rub your head, feeling your [[Link Cable]] still firmly implanted in the base of your skull. Looking up, you notice a small [[black box]] in the middle of the room, directly under the blue light.]
-</tw-passagedata><tw-passagedata pid="3" name="small indentations" tags="" position="12,231" size="100,100">(set: $PostStart to 1)\
+[[Start.]]</tw-passagedata><tw-passagedata pid="2" name="Start." tags="" position="9,119" size="100,100">(if: $PostStart is 1)[You walk back to the center of the room. The [[black box]] still sits in the middle of the room. The [[small indentations]] still dot the walls surrounding you. Your [[Link Cable]] still feels secure in the base of your skull.](else:)[You awaken in a small room. The walls around you are matte black, curving up, down, left, and right, creating a room that feels almost spherical, but no quite. The ceiling is occupied by a lone blue light, its dull but comforting glow illuminating collections of [[small indentations]] scattered across the walls. You rub your head, feeling your [[Link Cable]] still firmly implanted in the base of your skull. Looking up, you notice a small [[black box]] in the middle of the room, directly under the blue light.]
+</tw-passagedata><tw-passagedata pid="3" name="small indentations" tags="" position="9,241" size="100,100">(set: $PostStart to 1)\
 \
 You walk over to the wall, rubbing your hands across matter black surface. The smooth surface of the wall is broken up by the occassional small indentations in the wall you noticed earlier.
 
@@ -88,11 +72,11 @@ You pull the Link Cable around in front of your face. It doesn&#39;t look damage
 
 (click: ?si)[You inspect the indentation. (if: $LinkCable is 1)[It is clearly a [[Link Cable port.]] ] (else:) [You see small hole with three smaller holes in the formation of a triangle.] ] ]
 
-(if: $Curiosity is 1)[(hidden:)[[[Return-&gt;Start.]]] ] (else:)[ [[Return-&gt;Start.]] ]</tw-passagedata><tw-passagedata pid="6" name="Insert Link Cable into port." tags="" position="9,349" size="100,100">You insert your Link Cable into the port. Immediately, a display appears before your eyes. You watch as billions upon billions of data files cross your view. The sheer volume is overwhelming. Instinctually, you think the word &quot;Freeze&quot; and the stream of files stop. The file that is stopped in front of you is titled (text-style: &quot;fade-in-out&quot;)[&quot;Events.&quot;]
+(if: $Curiosity is 1)[(hidden:)[[[Return-&gt;Start.]]] ] (else:)[ [[Return-&gt;Start.]] ]</tw-passagedata><tw-passagedata pid="6" name="Insert Link Cable into port." tags="" position="15,366" size="100,100">You insert your Link Cable into the port. Immediately, a display appears before your eyes. You watch as billions upon billions of data files cross your view. The sheer volume is overwhelming. Instinctually, you think the word &quot;Freeze&quot; and the stream of files stop. The file that is stopped in front of you is titled (text-style: &quot;fade-in-out&quot;)[&quot;Events.&quot;]
 
 [[Read Events File.]]
 
-[[Unplug Link Cable.]]</tw-passagedata><tw-passagedata pid="7" name="Read Events File." tags="" position="10,479" size="100,100">(if: $BreakingPoint is 5)[(hidden:)[You open the &quot;Events&quot; file to reveal a number of other data sets, each with a name tag indicating date, time, and location.] ] (else:)[You open the &quot;Events&quot; file to reveal a number of other data sets, each with a name tag indicating date, time, and location.]
+[[Unplug Link Cable.]]</tw-passagedata><tw-passagedata pid="7" name="Read Events File." tags="" position="8,506" size="100,100">(if: $BreakingPoint is 5)[(hidden:)[You open the &quot;Events&quot; file to reveal a number of other data sets, each with a name tag indicating date, time, and location.] ] (else:)[You open the &quot;Events&quot; file to reveal a number of other data sets, each with a name tag indicating date, time, and location.]
 
 (if: $USA is true)[(hidden:)[(text-style: &quot;fade-in-out&quot;)[ [[5/23/2022.0637.USA]] ] ] ] (else:)[(text-style: &quot;fade-in-out&quot;)[ [[5/23/2022.0637.USA]] ] ]
 (if: $CN is true)[(hidden:)[(text-style: &quot;fade-in-out&quot;)[ [[8/27/2025.1347.CN]] ] ] ] (else:)[(text-style: &quot;fade-in-out&quot;)[ [[8/27/2025.1347.CN]] ] ]
@@ -104,7 +88,7 @@ You pull the Link Cable around in front of your face. It doesn&#39;t look damage
 (if: $BreakingPoint is 2)[The emotional weight of what you have witnessed is slowly becoming unbearable. [[Stopping-&gt;Unplug Link Cable.]] would be a good idea.]
 (if: $BreakingPoint is 3)[The amount of sorrow and dread is beginning to reach a threshold. You realize you are feeling every ounce of emotion of these events. Rage. Heartbreak. Sorrow. Fear. You hear a voice, calm and metallic, enter your mind. &quot;To view these instances alone is a foolish idea. You must have balance. [[Come to me.-&gt;Unplug Link Cable 2]] ]
 (if: $BreakingPoint is 4)[The metallic voice is gone, drowned out by the sea of raw emotion that overwhelms you. It is a tidal wave, one you see nearly no escape from. You feel as though you have one last chance to [[stop.-&gt;Unplug Link Cable.]] ]
-(if: $BreakingPoint is 5)[It is overwhelming. Your mind cannot contain the magnitude of what you have witnessed. So much suffering, all at once, flowing into you. You desperately attempt to pull yourself away from the wall, but your Link Cable rips out incorrectly. A massive electric jolt fires through your body, ripping through you in an instant. As you eyes flutter closed and you collapse to the floor, you feel a sense of relief. The pain is gone.]</tw-passagedata><tw-passagedata pid="8" name="Unplug Link Cable." tags="" position="381,202" size="100,100">You quickly unplug your Link Cable from the port, placing it back in the resting point at the base of your skull. Blinking a couple times, you stand and turn back to the center of the [[room.-&gt;Start.]]</tw-passagedata><tw-passagedata pid="9" name="5/23/2022.0637.USA" tags="" position="10,629" size="100,100">(set: $USA to true)\
+(if: $BreakingPoint is 5)[It is overwhelming. Your mind cannot contain the magnitude of what you have witnessed. So much suffering, all at once, flowing into you. You desperately attempt to pull yourself away from the wall, but your Link Cable rips out incorrectly. A massive electric jolt fires through your body, ripping through you in an instant. As you eyes flutter closed and you collapse to the floor, you feel a sense of relief. The pain is gone.]</tw-passagedata><tw-passagedata pid="8" name="Unplug Link Cable." tags="" position="381,202" size="100,100">You quickly unplug your Link Cable from the port, placing it back in the resting point at the base of your skull. Blinking a couple times, you stand and turn back to the center of the [[room.-&gt;Start.]]</tw-passagedata><tw-passagedata pid="9" name="5/23/2022.0637.USA" tags="" position="12,684" size="100,100">(set: $USA to true)\
 (set: $BreakingPoint to it + 1)\
 (if: $CN is true or $RUS is true or $FR is true or $BR is true)[You feel your mind pulled through virtual space. You suddenly find yourself on a city street, surrounded by people dressed in a wide assortment of clothing, from suits to street clothes, though most of the fashion is unfamiliar to you. Many have their faces covered, with gloves, kneed pads, and other protective gear over their clothing. Some are armed with various blunt objects: baseball bats, steel pipes and the like, and the occassional firearm. Most are not armed at all except for large signs. You cannot make out what most of the signs say, though one is like a banner above all the rest, the words on it written in red paint that drips off the bottom of the sign onto the street below. It just says &quot;We Are Dying.&quot;
 
@@ -114,7 +98,7 @@ You feel your mind [[pulled back to the &quot;Events&quot; file.-&gt;Read Events
 
 You turn at the sound of an explosion. Looking over, you see the crowd break like a wave back towards you. Over their heads you see men dressed in dark, crude armor, similar to the Civil Guardian units of your hometown. They rush into the crowd with guns and steel batons, beating and shooting those who get in their way. The screams of the people around you penetrate your mind. You drop to your knees as people run past you. They do not notice you. Instinctually, your mind falls back on the same word you thought of when the files were overwhelming you. &quot;Freeze.&quot;
 
-You feel your mind [[pulled back to the &quot;Events&quot; file.-&gt;Read Events File.]] ]</tw-passagedata><tw-passagedata pid="10" name="8/27/2025.1347.CN" tags="" position="149,632" size="100,100">(set: $BreakingPoint to it + 1)\
+You feel your mind [[pulled back to the &quot;Events&quot; file.-&gt;Read Events File.]] ]</tw-passagedata><tw-passagedata pid="10" name="8/27/2025.1347.CN" tags="" position="206,685" size="100,100">(set: $BreakingPoint to it + 1)\
 (set: $CN to true)\
 (if: $USA is true or $BR is true or $RUS is true or $FR is true)[Selecting the next file transports you into a small tent. A staleness is in the air, and you sense a sickly-sweet odor trying to break through the walls of the tent. Next to you, a man in a suit of plastic sits at a small desk. He switches between writing furiously on a pad of paper and typing into an old computer of mid-2020s design. With each stroke of his pen and tap of his keys, the man&#39;s face wells up with tears. Every few minutes, he takes a moment to compose himself, crying softly into his gloved hands.
 
@@ -128,7 +112,7 @@ The sound of rushing air and water cause you to turn. You see a woman coming thr
 
 Following him outside, you finally see what causes his anguish. Surrounding the tent are hundreds and hundreds of white bags, all human sized, stacked on top of each other like firewood. Dotted throughout the bodies are more tents with men and women walking through them in the same heavy plastic suits as the man you followed out. The sickly-sweet smell hits you even harder, and the heavy feeling of pain and loss begins to rush through you. 
 
-You fall to your knees, shielding yourself from the scene around you. You feel your mind [[pulled back to the &quot;Events&quot; file.-&gt;Read Events File.]] ]</tw-passagedata><tw-passagedata pid="11" name="12/24/2029.1613.FR" tags="" position="373,351" size="100,100">(set: $BreakingPoint to it + 1)\
+You fall to your knees, shielding yourself from the scene around you. You feel your mind [[pulled back to the &quot;Events&quot; file.-&gt;Read Events File.]] ]</tw-passagedata><tw-passagedata pid="11" name="12/24/2029.1613.FR" tags="" position="335,353" size="100,100">(set: $BreakingPoint to it + 1)\
 (set: $FR to true)\
 (if: $USA is true or $RUS is true or $BR is true or $CN is true)[Again, your mind is rushed through virtual space to a large room. In it, men and woman sit dressed in fine clothing of an older fashion. They are seated at small collections of wooden chairs covered in fine red velvet. They look on toward the center of the room where an older woman stands at a podium. She speaks with a fire and passion you have never seen, her words reverberating throughout the chamber, though you cannot understand what she is saying. Though most of her onlookers hold stern faces, some sit and stare at her with fear in their eyes. The rage is palpable and begins to flow into your body. A man next to you bounces his leg up and down as she speaks, looking down nervously at his watch.
 
@@ -138,7 +122,7 @@ As rage and fear begin to overwhelm you, you feel your mind [[pulled back to the
 
 As the speech continues, the stern faces break into expressions of rage and screams of encouragement go up through the crowd. The woman&#39;s fire grows as the onlookers goad her on until finally she slams her fist on the podium. The man next to you looks up, his eyes wide with fear as the doors to the room open around you. Soldiers march into the room, guns readied, and with one distinct shout from the woman at the podium, they begin to fire into the room. The man next to you stands and looks at you, or rather, through you. As he stares a hole through you, a bullet rips through his neck, blood splattering toward you and going through you as you watch in hour. The man falls to his knees, clutching his neck as blood seeps out onto his watch. You step back in horror and look up to see the woman still screaming, her commands more fierce than ever.
 
-As rage and fear begin to overwhelm you, you feel your mind [[pulled back to the &quot;Events&quot; file.-&gt;Read Events File.]] ]</tw-passagedata><tw-passagedata pid="12" name="5/23/2032.1234.RUS" tags="" position="280,581" size="100,100">(set: $BreakingPoint to it + 1)\
+As rage and fear begin to overwhelm you, you feel your mind [[pulled back to the &quot;Events&quot; file.-&gt;Read Events File.]] ]</tw-passagedata><tw-passagedata pid="12" name="5/23/2032.1234.RUS" tags="" position="347,611" size="100,100">(set: $BreakingPoint to it + 1)\
 (set: $RUS to true)\
 (if: $USA is true or $FR is true or $BR is true or $CN is true)[Once again, in the blink of an eye, you find yourself in a snow covered field. Looking around you, there is almost nothing for as far as the eye can see save for a small fire burning in the distance. Walking toward it, you see five figures surrounding it. Two of the figures are off to the side, huddled together over a small electronic device. It looks like a much older version of a holo-tablet. Near the fire, two of the other figures stand over the last who is lying down on a collection of blankets, breathing but unmoving. There is a deep sense of sadness in the air. 
 
@@ -152,7 +136,7 @@ Getting closer, you notice that the two figures of to the side are a woman and c
 
 The kneeling young man gently lays the older man back on the ground. As he stands up, you no longer see the older man drawing breath. The screen of the tablet flickers and dies. The child starts to cry.
 
-As the despair unfolds before you, you feel your mind [[pulled back to the &quot;Events&quot; file.-&gt;Read Events File.]] ]</tw-passagedata><tw-passagedata pid="13" name="5/23/2036.0637.BR" tags="" position="386,477" size="100,100">(set: $BreakingPoint to it + 1)\
+As the despair unfolds before you, you feel your mind [[pulled back to the &quot;Events&quot; file.-&gt;Read Events File.]] ]</tw-passagedata><tw-passagedata pid="13" name="5/23/2036.0637.BR" tags="" position="424,469" size="100,100">(set: $BreakingPoint to it + 1)\
 (set: $BR to true)\
 (if: $USA is true or $FR is true or $RUS is true or $CN is true)[Like clockwork, you are pulled back into virtual space. This time, you find yourself at the edge of a massive forest surrounded not by tree, but tree stumps. Ahead of you, you see thick black clouds of smoke coming up from large fires, their flames climbing to monumental heights. The smoke quickly washes over you, obscuring your vision. As you rush to get away from the smoke, you look up and stop in your tracks.
 
