@@ -11,7 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="The System V2" startnode="1" creator="Twine" creator-version="2.2.1" ifid="D6EA074B-C4DC-400C-9212-FC995F38DC7D" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+<tw-storydata name="The System V2" startnode="1" creator="Twine" creator-version="2.3.9" ifid="D6EA074B-C4DC-400C-9212-FC995F38DC7D" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 
 
 
@@ -329,7 +329,7 @@ The System speaks.
 &quot;$name, your curiosity strikes me. In the face of these questions, you chose to find out more. You believed that information, not action, was needed in dire moments. Many do not walk this path. They attach themselves to the first option that resonates with them. You are different.&quot;
 
 &quot;Please, [[step into the pod.]]&quot;]\
-(if: $Rebellion is $Integration)[The box feels the same. Unchanged. Unphased.
+(if: $Rebellion is $Integration and $Curiosity is not 6)[The box feels the same. Unchanged. Unphased.
 
 The System speaks.
 
