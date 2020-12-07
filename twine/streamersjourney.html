@@ -116,10 +116,10 @@ Anyway, lets [[start streaming!]]] ]\
 (else-if: $followers is &gt;= 40 and &lt;=49)[(set: $subscribers to it + 2)]\
 (else-if: $followers is &gt;= 50)[(set: $subscribers to it + (random: 2,3))]\
 (else-if: $followers is &gt;= 150)[(set: $subscribers to it + 3)]\
-(if: $stress &lt;= 4)[(set: $health to &quot;Great&quot;)]\
-(else-if: $stress is &gt;= 5 and &lt;= 9)[(set: $health to &quot;Good&quot;)]\
-(else-if: $stress is &gt;= 10 and &lt;= 14)[(set: $health to &quot;Fine&quot;)]\
-(else-if: $stress is &gt;= 15)[(set: $health to &quot;Bad&quot;)]\
+(if: $stress &lt;= 7)[(set: $health to &quot;Great&quot;)]\
+(else-if: $stress is &gt;= 8 and &lt;= 14)[(set: $health to &quot;Good&quot;)]\
+(else-if: $stress is &gt;= 15 and &lt;= 24)[(set: $health to &quot;Fine&quot;)]\
+(else-if: $stress is &gt;= 25)[(set: $health to &quot;Bad&quot;)]\
 (if: $health is not &quot;Bad&quot;)[(if: $enjoyment &gt; $stress)[(set: $stress to it - 1)]]\
 (if: $health is not &quot;Bad&quot;)[This is where we check in on how our stream is doing, but just as importantly, it&#39;s where we check in on ourselves. Below are a number of stats to track our stream.
 
